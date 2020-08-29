@@ -6,12 +6,12 @@
         {
             "label": "Build & Run Prod",
             "type": "shell",
-            "command": "gradle build && mkdir -p build/dependency && (cd build/dependency; jar -xf ../libs/*.jar) && docker build --build-arg DEPENDENCY=build/dependency -t authentication . && docker run -e \"SPRING_PROFILES_ACTIVE=prod\" -p 80:8080 authentication"
+            "command": "./gradlew build && mkdir -p build/dependency && (cd build/dependency; jar -xf ../libs/*.jar) && docker build --build-arg DEPENDENCY=build/dependency -t authentication . && docker run -e \"SPRING_PROFILES_ACTIVE=prod\" -p 80:8080 authentication"
         },
         {
             "label": "Build & Run Dev",
             "type": "shell",
-            "command": "gradle build && mkdir -p build/dependency && (cd build/dependency; jar -xf ../libs/*.jar) && docker build --build-arg DEPENDENCY=build/dependency -t authentication . && docker run -e \"SPRING_PROFILES_ACTIVE=dev\" -e \"JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,address=0.0.0.0:5005,server=y,suspend=n\" -p 80:8080 -p 5005:5005 authentication"
+            "command": "./gradlew build && mkdir -p build/dependency && (cd build/dependency; jar -xf ../libs/*.jar) && docker build --build-arg DEPENDENCY=build/dependency -t authentication . && docker run -e \"SPRING_PROFILES_ACTIVE=dev\" -e \"JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,address=0.0.0.0:5005,server=y,suspend=n\" -p 80:8080 -p 5005:5005 authentication"
         }
     ]
 }
