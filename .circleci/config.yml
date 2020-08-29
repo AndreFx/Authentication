@@ -49,7 +49,7 @@ jobs:
           path: ~/repo/build/libs/authentication-spring-boot-docker-0.0.1.jar
       
       - store_test_results:
-          path: ~/repo/build/reports
+          path: ~/repo/build/reports/tests/test
 
 workflows:
   main:
