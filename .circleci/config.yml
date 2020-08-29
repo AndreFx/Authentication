@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:14-jdk
+      - image: circleci/openjdk:14-ea-26-jdk-buster
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -41,8 +41,18 @@ jobs:
       # run tests!
       - run: gradle test
 
+      - run:
+          name: Analyze on SonarCloud
+          command: gradle build sonarqube"
+
       - store_artifacts:
           path: ~/repo/build/libs/authentication-spring-boot-docker-0.0.1.jar
       
       - store_test_results:
           path: ~/repo/build/reports
+
+workflows:
+  main:
+    jobs:
+      - build:
+          context: SonarCloud

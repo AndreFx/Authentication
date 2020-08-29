@@ -22,27 +22,27 @@ public class AuthenticationControllerTest {
         endpoint = standaloneSetup(rest).build();
     }
 
-    @Test
-    public void create_ok() throws Exception {
-        endpoint
-            .perform(post("/auth/").contentType(APPLICATION_JSON).content("{\"name\": \"Hudson Mendes\"}"))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$").value(hasSize(1)))
-            .andExpect(jsonPath("$[0]").value("Hudson Mendes"));
+    // @Test
+    // public void create_ok() throws Exception {
+    //     endpoint
+    //         .perform(post("/auth/").contentType(APPLICATION_JSON).content("{\"name\": \"Hudson Mendes\"}"))
+    //         .andExpect(status().isOk())
+    //         .andExpect(jsonPath("$").value(hasSize(1)))
+    //         .andExpect(jsonPath("$[0]").value("Hudson Mendes"));
 
-        endpoint
-            .perform(post("/auth/").contentType(APPLICATION_JSON).content("{\"name\": \"Bruna Almeida\"}"))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$").value(hasSize(2)))
-            .andExpect(jsonPath("$[0]").value("Hudson Mendes"))
-            .andExpect(jsonPath("$[1]").value("Bruna Almeida"));
-    }
+    //     endpoint
+    //         .perform(post("/auth/").contentType(APPLICATION_JSON).content("{\"name\": \"Bruna Almeida\"}"))
+    //         .andExpect(status().isOk())
+    //         .andExpect(jsonPath("$").value(hasSize(2)))
+    //         .andExpect(jsonPath("$[0]").value("Hudson Mendes"))
+    //         .andExpect(jsonPath("$[1]").value("Bruna Almeida"));
+    // }
 
-    @Test
-    public void create_badRequest() throws Exception {
-        endpoint
-            .perform(post("/auth/").contentType(APPLICATION_JSON).content("{\"typoName\": \"Hudson Mendes\"}"))
-            .andExpect(status().isBadRequest())
-            .andExpect(content().string("'name' is required."));
-    }
+    // @Test
+    // public void create_badRequest() throws Exception {
+    //     endpoint
+    //         .perform(post("/auth/").contentType(APPLICATION_JSON).content("{\"typoName\": \"Hudson Mendes\"}"))
+    //         .andExpect(status().isBadRequest())
+    //         .andExpect(content().string("'name' is required."));
+    // }
 }

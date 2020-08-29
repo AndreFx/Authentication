@@ -1,9 +1,9 @@
 # Authentication
-![SonarQubeMaintainability](https://sonarcloud.io/api/project_badges/measure?project=AndreFx_ReceiptOrganizer&metric=sqale_rating)
+![SonarQubeMaintainability](https://sonarcloud.io/api/project_badges/measure?project=AndreFx_Authentication&metric=sqale_rating)
 
-![SonarQubeCoverage](https://sonarcloud.io/api/project_badges/measure?project=AndreFx_ReceiptOrganizer&metric=coverage)
+![SonarQubeCoverage](https://sonarcloud.io/api/project_badges/measure?project=AndreFx_Authentication&metric=coverage)
 
-Build: [![CircleCI](https://circleci.com/gh/AndreFx/ReceiptOrganizer.svg?style=svg)](https://circleci.com/gh/AndreFx/ReceiptOrganizer)
+Build: [![CircleCI](https://circleci.com/gh/AndreFx/Authentication.svg?style=svg)](https://circleci.com/gh/AndreFx/Authentication)
 Name TBD. Single page webapp that allows users to track maintenance and parts for their vehicles
 
 ## Further Notes & Ideas
