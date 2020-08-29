@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:8-jdk
+      - image: adoptopenjdk:14-jre-hotspot
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -31,7 +31,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: gradle dependencies
+      - run: gradle build
 
       - save_cache:
           paths:
@@ -40,3 +40,9 @@ jobs:
 
       # run tests!
       - run: gradle test
+
+      - store_artifacts:
+          path: ~/repo/build/libs/authentication-spring-boot-docker-0.0.1.jar
+      
+      - store_test_results:
+          path: ~/repo/build/reports

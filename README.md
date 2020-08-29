@@ -1,4 +1,9 @@
-# MyGarage
+# Authentication
+![SonarQubeMaintainability](https://sonarcloud.io/api/project_badges/measure?project=AndreFx_ReceiptOrganizer&metric=sqale_rating)
+
+![SonarQubeCoverage](https://sonarcloud.io/api/project_badges/measure?project=AndreFx_ReceiptOrganizer&metric=coverage)
+
+Build: [![CircleCI](https://circleci.com/gh/AndreFx/ReceiptOrganizer.svg?style=svg)](https://circleci.com/gh/AndreFx/ReceiptOrganizer)
 Name TBD. Single page webapp that allows users to track maintenance and parts for their vehicles
 
 ## Further Notes & Ideas
@@ -32,4 +37,7 @@ Microservices may include
     part searching
     receipt storage
     client webapp
+
+## TODO
+Setup CircleCI on this project
 
