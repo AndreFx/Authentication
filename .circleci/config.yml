@@ -43,7 +43,7 @@ jobs:
 
       - run:
           name: Analyze on SonarCloud
-          command: ./gradlew build sonarqube"
+          command: ./gradlew build sonarqube
 
       - store_artifacts:
           path: ~/repo/build/libs/authentication-spring-boot-docker-0.0.1.jar
