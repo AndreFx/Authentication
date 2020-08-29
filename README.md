@@ -1,9 +1,10 @@
-# Authentication
 ![SonarQubeMaintainability](https://sonarcloud.io/api/project_badges/measure?project=AndreFx_Authentication&metric=sqale_rating)
 
 ![SonarQubeCoverage](https://sonarcloud.io/api/project_badges/measure?project=AndreFx_Authentication&metric=coverage)
 
 Build: [![CircleCI](https://circleci.com/gh/AndreFx/Authentication.svg?style=svg)](https://circleci.com/gh/AndreFx/Authentication)
+
+# Authentication
 Name TBD. Single page webapp that allows users to track maintenance and parts for their vehicles
 
 ## Further Notes & Ideas
@@ -37,7 +38,3 @@ Microservices may include
     part searching
     receipt storage
     client webapp
-
-## TODO
-Setup CircleCI on this project
-
